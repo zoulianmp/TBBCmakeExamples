@@ -14,7 +14,7 @@
 
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
-project(fibonacci CXX)
+project(task_group CXX)
 
 
 #----------------------------------------------------------------------------
@@ -26,14 +26,14 @@ file(GLOB headers ${PROJECT_SOURCE_DIR}/*.h)
 
 INCLUDE_DIRECTORIES(${TBB_INCLUDE_DIRS})
 
-add_executable(fibonacci ${sources} ${headers})
+add_executable(task_group ${sources} ${headers})
 
 # find_package will search for available TBBConfig using variables CMAKE_PREFIX_PATH and TBB_DIR.
 #find_package(TBB REQUIRED tbb)
 
 #message(" fabDESTINATION DESTINATION   ${PROJECT_BINARY_DIR}/Debug ")
 
-target_link_libraries(fibonacci ${TBB_LIBRARIES})   
+target_link_libraries(task_group ${TBB_LIBRARIES})   
 
 file(COPY  ${TBB_DLLS} DESTINATION   "${PROJECT_BINARY_DIR}/Debug")
 

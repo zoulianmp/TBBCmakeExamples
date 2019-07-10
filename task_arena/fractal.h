@@ -17,7 +17,7 @@
 #ifndef FRACTAL_H_
 #define FRACTAL_H_
 
-#include "../../common/gui/video.h"
+#include "../common/gui/video.h"
 
 #include "tbb/task.h"
 #include "tbb/task_scheduler_init.h"

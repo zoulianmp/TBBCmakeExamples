@@ -20,7 +20,7 @@
 #include <cstdlib>
 #include "tbb/task_scheduler_init.h"
 #include "tbb/tick_count.h"
-#include "../../common/utility/utility.h"
+#include "../common/utility/utility.h"
 #include <iostream>
 #include <vector>
 #include "Graph.h"

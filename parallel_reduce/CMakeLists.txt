@@ -12,28 +12,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
-project(fibonacci CXX)
+
+project(parallel_reduce)
 
 
 #----------------------------------------------------------------------------
 # Locate sources and headers for this project
 # NB: headers are included so they will show up in IDEs
 #
-file(GLOB sources ${PROJECT_SOURCE_DIR}/*.cpp)
-file(GLOB headers ${PROJECT_SOURCE_DIR}/*.h)
+##file(GLOB sources ${PROJECT_SOURCE_DIR}/*.cpp)
+##file(GLOB headers ${PROJECT_SOURCE_DIR}/*.h)
 
 INCLUDE_DIRECTORIES(${TBB_INCLUDE_DIRS})
 
-add_executable(fibonacci ${sources} ${headers})
+set (sourcename  convex_hull_bench)
 
+#set (sourcename convex_hull_sample)
+
+ 
+ 
+
+add_executable(${sourcename}  ${sourcename}.cpp convex_hull.h)
+target_link_libraries(${sourcename}  ${TBB_LIBRARIES})   
+
+ 
 # find_package will search for available TBBConfig using variables CMAKE_PREFIX_PATH and TBB_DIR.
 #find_package(TBB REQUIRED tbb)
 
 #message(" fabDESTINATION DESTINATION   ${PROJECT_BINARY_DIR}/Debug ")
 
-target_link_libraries(fibonacci ${TBB_LIBRARIES})   
+
 
 file(COPY  ${TBB_DLLS} DESTINATION   "${PROJECT_BINARY_DIR}/Debug")
 

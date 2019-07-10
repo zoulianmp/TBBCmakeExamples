@@ -26,7 +26,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <cctype>
-#include "../../common/utility/utility.h"
+#include "../common/utility/utility.h"
 
 extern void generate_if_needed(const char*);
 

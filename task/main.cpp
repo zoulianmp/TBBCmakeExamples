@@ -35,7 +35,7 @@
 #include "tbb/tick_count.h"
 #include "tbb/task_scheduler_init.h"
 
-#include "../../common/utility/utility.h"
+#include "../common/utility/utility.h"
 
 using namespace std;
 

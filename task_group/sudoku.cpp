@@ -14,7 +14,7 @@
     limitations under the License.
 */
 
-#include "../../common/utility/utility.h"
+#include "../common/utility/utility.h"
 
 #if __TBB_MIC_OFFLOAD
 #pragma offload_attribute (push,target(mic))
